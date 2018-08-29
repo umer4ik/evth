@@ -15,4 +15,11 @@ describe('array/create', () => {
     const arr = create(5, (_, i) => i)
     assert.deepEqual(arr, [0, 1, 2, 3, 4])
   })
+  it('should create an array if Array.prototype.fill is undefined', () => {
+    Array.prototype.fill = undefined
+    const arr = create(5, (_, i) => i)
+    const arr1 = create(5, 1)
+    assert.deepEqual(arr, [0, 1, 2, 3, 4])
+    assert.deepEqual(arr1, [1, 1, 1, 1, 1])
+  })
 })
