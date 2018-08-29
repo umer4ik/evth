@@ -2,9 +2,9 @@
   "name": "evth",
   "version": "0.0.3",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "nyc mocha \"**/*.test.js\""
+    "test": "nyc mocha \"./src/**/*.test.js\""
   },
   "author": "Umer Hurramov <umer.hurramov@gmail.com>",
   "license": "UNLICENSED",
@@ -13,8 +13,25 @@
     "url": "https://github.com/umer4ik/evth.git"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-stage-2": "^7.0.0",
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
     "nyc": "^13.0.1"
+  },
+  "babel": {
+    "presets": [
+      ["@babel/env", {
+        "targets": {
+          "edge": "17",
+          "firefox": "60",
+          "chrome": "67",
+          "safari": "11.1",
+          "ie": "10"
+        }
+      }]
+    ]
   }
 }
