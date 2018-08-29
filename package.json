@@ -2,7 +2,7 @@
   "name": "evth",
   "version": "0.0.4",
   "description": "",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "nyc mocha \"./src/**/*.test.js\""
   },
