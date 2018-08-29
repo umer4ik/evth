@@ -19,3 +19,5 @@ const create = (length, filler) => {
     return array
   }
 }
+
+module.exports = create
